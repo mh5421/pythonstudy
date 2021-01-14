@@ -7,11 +7,34 @@
     </head>
     <body>
         <div class="container">
+            
             <form>
                 <input type="text" class="title">
                 <input type="text" class="content">
                 <input type="text" class="userid">
                 <button>전송</button>
+                <div>
+                    <table>
+                        <tr>
+                            <th>글번호</th>
+                            <th>제목</th>
+                            <th>글쓴이</th>
+                            <tr>
+                        {% for n in my_list %}
+                        </tr>
+                            <td>
+                                {{n.b_id}}
+                            </td>
+                            <td>
+                                {{n.b_title}}
+                            </td>
+                            <td>
+                                {{n.m_id}}
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </table>
+                </div>
             </form>
         </div>
     </body>
